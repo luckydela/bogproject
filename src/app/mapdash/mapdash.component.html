@@ -1,0 +1,48 @@
+
+<div class="content">
+  <div class="container-fluid">
+<div class="row" *ngIf="idpanel" >
+    <div class="col-md-4 col-sm-0 col-xs-0">
+
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 col-ls-12">
+      <div class="card animated zoomIn">
+        <div class="card-header card-header">
+          <img src="assets/img/gcblogo.jpg" alt="">
+          <h4 class="card-title "> Triangulate location </h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="locationform">
+              <div class="range-form">
+                  <div class="range">
+                      <input type="text"  placeholder="Enter location ID"  formControlName="locationid" class="">
+                    </div>
+                    <br>    
+              </div>
+              <div class="range-btn">
+                <button type="submit" class="btn btn-round" (click)="triangulate()">
+                  Triangulate
+                </button>
+                <button type="submit" class="btn btn-round " (click)="cancelfxn()">
+                  Cancel
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-0 col-xs-0 col-lg-0 col-">
+
+    </div>
+  </div>
+
+
+  <div class="mapslayer">
+    <h3>User Locationn Information</h3>
+    <agm-map [latitude]="lat" [longitude]="lngt">
+      <agm-marker [latitude]="lat" [longitude]="lngt"></agm-marker>
+    </agm-map>
+  </div>
+
+<!-- <div #map style="width:100%;height:400px"></div> -->
+

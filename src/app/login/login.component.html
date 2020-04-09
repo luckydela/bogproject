@@ -1,0 +1,31 @@
+<body>
+<div class="col-md-4 logincard">
+   <div class="card animated tada" >
+     <!-- <h6 class="card-category text-gray" align="center">smartCover</h6>-->
+ <div class="card-avatar">
+        <a href="#pablo">
+          <img class="img" src="assets/img/gcblogo.jpg"/>
+        </a>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title" align="center">Triangulate User</h3>
+      
+            <form (ngSubmit)="login()" #f="ngForm">
+                <div class="form-group">
+                  <!-- <label class="bmd-label-floating"> Email</label> -->
+                  <input type="email" class="" name="em" placeholder="Email"[(ngModel)]="usr.email" required>
+                </div>    
+                <br><br>
+                  <div class="form-group">
+                    <!-- <label class="bmd-label-floating">Password</label> -->
+                    <input type="password" class="" id="pwd" name="pwd" placeholder="Password" [(ngModel)]="usr.password" required>
+                  </div>
+                  <br><br>       
+                  <!-- <button type="submit" class="btn btn-block" [disabled]="!f.valid">LogIn</button> -->
+                 <button type="submit" class="btn btn-block" (click)="loginIn()">LogIn</button> 
+                 <!--<a href="" align="center">Create Account Here</a>-->         
+             </form>    
+        </div>
+    </div>
+  </div>
+</body>

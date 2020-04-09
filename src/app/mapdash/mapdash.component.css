@@ -1,0 +1,13 @@
+img{
+    height: 80px;
+    width: 120px;
+    border-radius: 100px;
+}
+
+.btn{
+    background: rgba(240, 201, 29, 0.6);
+}
+
+agm-map{
+    height: 300px;
+}
