@@ -14,8 +14,11 @@
         <div class="card-body">
           <form [formGroup]="locationform">
               <div class="range-form">
-                  <div class="range">
+                  <!-- <div class="range">
                       <input type="text"  placeholder="Enter location ID"  formControlName="locationid" class="">
+                    </div> -->
+                    <div class="range">
+                      <input type="text" class="" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
                     </div>
                     <br>    
               </div>
@@ -42,9 +45,21 @@
 
   <div class="mapslayer">
     <h3 align="center">User Location:{{title}}</h3>
-    <agm-map [latitude]="lat" [longitude]="lngt">
-      <agm-marker [latitude]="lat" [longitude]="lngt"></agm-marker>
+    <agm-map [latitude]="latitude" [longitude]="longitude" >
+      <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true" (dragEnd)="markerDragEnd($event)"></agm-marker>
     </agm-map>
+
+    
+   
+    <!-- <agm-map [latitude]="lat" [longitude]="lngt" >
+      <agm-marker [latitude]="lat" [longitude]="lngt" 
+      
+        ></agm-marker>
+    </agm-map> -->
+   
+    <!-- <h5>Address: {{address}}</h5>
+    <div>Latitude: {{lat}}</div>
+    <div>Longitude: {{lngt}}</div> -->
   </div>
 
 <!-- <div #map style="width:100%;height:400px"></div> -->

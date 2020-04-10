@@ -25,7 +25,8 @@ import { FullviewComponent } from './fullview/fullview.component'
     ReactiveFormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyAat6JOFdIXowfycCVKwygR7NX-_sOsPWw'
+      apiKey:'AIzaSyAat6JOFdIXowfycCVKwygR7NX-_sOsPWw',
+      libraries:['places']
     })
   ],
   providers: [],
