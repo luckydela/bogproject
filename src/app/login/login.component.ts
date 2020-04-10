@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
 
   usr={
     email:'',
-    pwd:''
+    password:''
   }
   constructor(private router: Router) { }
 

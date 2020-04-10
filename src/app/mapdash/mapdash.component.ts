@@ -36,6 +36,13 @@ export class MapdashComponent implements OnInit {
     })
   }
 
+  triangulate(){
+
+  }
+
+  cancelfxn(){
+    
+  }
 
 
 }
