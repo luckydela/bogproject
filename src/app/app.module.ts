@@ -5,7 +5,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule, routeComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import {AgmCoreModule} from '@agm/core'
+import {AgmCoreModule} from '@agm/core';
+import { FullviewComponent } from './fullview/fullview.component'
 
 
 
@@ -13,6 +14,7 @@ import {AgmCoreModule} from '@agm/core'
   declarations: [
     AppComponent,
     routeComponent,
+    FullviewComponent,
     
     
   ],

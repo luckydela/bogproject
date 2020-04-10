@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginIn(){
-    this.router.navigate(['/dashboard'])
+    this.router.navigate(['/dashboard/mapsol'])
   }
 
 }

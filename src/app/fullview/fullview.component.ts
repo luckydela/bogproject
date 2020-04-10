@@ -2,15 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import {MapsService} from '../service/maps.service';
 
-
-
 @Component({
-  selector: 'app-mapdash',
-  templateUrl: './mapdash.component.html',
-  styleUrls: ['./mapdash.component.css']
+  selector: 'app-fullview',
+  templateUrl: './fullview.component.html',
+  styleUrls: ['./fullview.component.css']
 })
-export class MapdashComponent implements OnInit {
-
+export class FullviewComponent implements OnInit {
   idpanel: boolean = true;
   locationform:FormGroup;
 
@@ -19,6 +16,12 @@ export class MapdashComponent implements OnInit {
   lat: string = '';
   lngt: string = '';
   title: string='';
+  ip:string='';
+  callcode:string;
+  c_area:string;
+  city:string;
+  region:string;
+
 
   location: Object;
 
@@ -27,24 +30,23 @@ export class MapdashComponent implements OnInit {
     this.locationform = this.formbuilder.group({
       locationid:new FormControl('',[Validators.required])
     });
-  }
 
-  ngOnInit() {
+   }
+
+  ngOnInit(): void {
+
     this.mapservice.getLocation().subscribe(data=>{
       console.log(data);
       this.lat = data.latitude;
       this.lngt = data.longitude;
       this.title = data.country_name;
+      this.ip = data.ip;
+      this.c_area = data.country_area;
+      this.city = data.city;
+      this.callcode = data.country_calling_code;
+      this.region = data.region;
+
     })
   }
-
-  triangulate(){
-
-  }
-
-  cancelfxn(){
-    
-  }
-
 
 }

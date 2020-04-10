@@ -1,0 +1,61 @@
+
+<div class="content">
+    <div class="container-fluid">
+  <div class="row" *ngIf="idpanel" >
+      <div class="col-md-4 col-sm-0 col-xs-0">
+  
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 col-ls-12">
+        <div class="card animated zoomIn">
+          <div class="card-header card-header">
+            <img src="assets/img/gcblogo.jpg" alt="">
+            <h2 class="card-title " align="center"> Live location: {{title}} </h2>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="locationform">
+                <div class="range-form">
+                    <div class="range">
+                        <!-- <input type="text"  placeholder="Enter location ID"  formControlName="locationid" class=""> -->
+                    <h3 align="center">{{region}}</h3>  
+                    </div>
+                      <br> 
+                      <div class="range">
+                        <!-- <input type="text"  placeholder="Enter location ID"  formControlName="locationid" class=""> -->
+                      
+                        <h3 align="center">{{ip}}</h3>  
+                    </div>
+                      <br> 
+                      <div class="range">
+                        <!-- <input type="text"  placeholder="Enter location ID"  formControlName="locationid" class=""> --> 
+                     <h3 align="center">{{c_area}}</h3>  
+                    </div>
+                      <br> 
+                      <div class="range">
+                        <!-- <input type="text"  placeholder="Enter location ID"  formControlName="locationid" class=""> -->
+                        <h3 align="center">{{city}}</h3>    
+                    </div>
+                      <br>
+                      <div class="range">
+                        <!-- <input type="text"  placeholder="Enter location ID"  formControlName="locationid" class=""> -->
+                        <h3 align="center">{{callcode}}</h3>    
+                    </div>
+                      <br>    
+                </div>
+                <div class="range-btn">
+                  <button type="submit" class="btn btn-round" (click)="triangulate()">
+                    print
+                  </button>
+                  <button type="submit" class="btn btn-round " (click)="cancelfxn()">
+                    cancel
+                  </button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-0 col-xs-0 col-lg-0 col-">
+  
+      </div>
+    </div>
+  </div>
+  </div>
